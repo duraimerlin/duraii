@@ -1,0 +1,734 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Studio Durai | Luxury Interiors</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --red: #b51d27;
+  --cream: #f7f4ef;
+  --dark: #1c1a19;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--dark);
+}
+
+/* NAVIGATION */
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 19px;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+}
+
+.logo-symbol {
+  color: var(--red);
+  font-size: 38px;
+  transform: rotate(-20deg);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  transition: color .3s;
+}
+
+nav a:hover {
+  color: #e5454e;
+}
+
+.nav-btn {
+  border: 1px solid rgba(255,255,255,.8);
+  padding: 14px 22px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.65) 0%,
+      rgba(0,0,0,.35) 50%,
+      rgba(0,0,0,.28) 100%
+    ),
+    url('https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=2200&q=90');
+
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 140px 5% 90px;
+}
+
+.hero-content {
+  max-width: 850px;
+  position: relative;
+  z-index: 2;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #e8e1dd;
+  margin-bottom: 35px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 38px;
+  height: 2px;
+  background: var(--red);
+  vertical-align: middle;
+  margin-right: 14px;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: clamp(48px, 5.3vw, 92px);
+  line-height: 1.35;
+  letter-spacing: -2px;
+}
+
+.hero h1 em {
+  color: #c72230;
+  font-weight: 400;
+  border-bottom: 3px solid var(--red);
+}
+
+.hero-description {
+  margin-top: 35px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #eee;
+  max-width: 560px;
+}
+
+.main-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 35px;
+  padding: 20px 28px;
+  background: white;
+  color: #171717;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+  transition: .3s;
+}
+
+.main-btn:hover {
+  background: var(--red);
+  color: white;
+}
+
+/* BIG YEAR NUMBER */
+
+.years {
+  position: absolute;
+  bottom: 70px;
+  right: 5%;
+  text-align: right;
+}
+
+.years-number {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(100px, 16vw, 260px);
+  line-height: 1;
+  font-weight: 400;
+  color: rgba(255,255,255,.65);
+}
+
+.years-number span {
+  color: var(--red);
+}
+
+.years p {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #eee;
+}
+
+/* COMMON SECTIONS */
+
+section {
+  padding: 110px 7%;
+}
+
+.section-label {
+  color: var(--red);
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(35px, 4vw, 60px);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.about img {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 2;
+  color: #666;
+}
+
+.dark-link {
+  display: inline-block;
+  margin-top: 30px;
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px solid var(--red);
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* SERVICES */
+
+.services {
+  background: #211e1c;
+  color: white;
+  text-align: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.service-card {
+  background: #302b28;
+  padding: 50px 30px;
+  text-align: left;
+  transition: transform .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-number {
+  color: #c52a34;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 29px;
+  margin: 30px 0 20px;
+}
+
+.service-card p {
+  color: #c3bbb5;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+  margin-top: 50px;
+}
+
+.project {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  background: #ddd;
+}
+
+.project img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .5s;
+}
+
+.project:hover img {
+  transform: scale(1.08);
+}
+
+.project-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  color: white;
+  padding: 45px 25px 25px;
+  background: linear-gradient(transparent,rgba(0,0,0,.75));
+}
+
+.project-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.project-info p {
+  font-size: 12px;
+  margin-top: 8px;
+  letter-spacing: 2px;
+}
+
+/* JOURNAL */
+
+.journal {
+  background: #eee9e2;
+  text-align: center;
+}
+
+.journal p {
+  max-width: 600px;
+  margin: auto;
+  color: #666;
+  line-height: 1.9;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #b51d27;
+  color: white;
+  text-align: center;
+}
+
+.contact p {
+  margin: 20px auto;
+  max-width: 580px;
+  line-height: 1.8;
+}
+
+footer {
+  background: #151515;
+  color: #aaa;
+  padding: 35px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 13px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+  header {
+    position: absolute;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+
+  nav a {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .nav-btn {
+    padding: 9px;
+  }
+
+  .hero {
+    padding-top: 210px;
+    align-items: flex-start;
+    min-height: 850px;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px, 8vw, 70px);
+  }
+
+  .years {
+    bottom: 35px;
+  }
+
+  .years-number {
+    font-size: 120px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .services-grid,
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 75px 6%;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}
+
+@media(max-width:500px) {
+  header {
+    padding: 18px 5%;
+    flex-direction: column;
+  }
+
+  nav {
+    justify-content: flex-start;
+  }
+
+  .hero {
+    padding-top: 240px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .years-number {
+    font-size: 90px;
+  }
+
+  .about img {
+    height: 350px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <a href="#home" class="logo">
+    <span class="logo-symbol">◇</span>
+    <span>STUDIO<br>DURAI</span>
+  </a>
+
+  <nav>
+    <a href="#home">HOME</a>
+    <a href="#about">ABOUT US</a>
+    <a href="#services">SERVICES</a>
+    <a href="#portfolio">PORTFOLIO</a>
+    <a href="#journal">JOURNAL</a>
+    <a href="#contact">CONTACT US</a>
+    <a href="#contact" class="nav-btn">
+      BOOK CONSULTATION
+    </a>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<main>
+<section class="hero" id="home">
+
+  <div class="hero-content">
+    <div class="eyebrow">
+      EST. 1981 · BANGALORE
+    </div>
+
+    <h1>
+      Bespoke spaces, crafted<br>
+      over <em>45+ years.</em>
+    </h1>
+
+    <p class="hero-description">
+      Bespoke interiors, handcrafted furniture
+      and precision execution — trusted for
+      over 45+ years.
+    </p>
+
+    <a href="#contact" class="main-btn">
+      BOOK A CONSULTATION
+      <span>→</span>
+    </a>
+  </div>
+
+  <div class="years">
+    <div class="years-number">
+      45<span>+</span>
+    </div>
+    <p>
+      Four Decades of Trust.<br>
+      An Enduring Legacy of Excellence.
+    </p>
+  </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+  <div>
+    <img
+      src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+      alt="Luxury interior design">
+  </div>
+
+  <div>
+    <div class="section-label">OUR STORY</div>
+
+    <h2 class="section-title">
+      Creating spaces that
+      tell your story.
+    </h2>
+
+    <p class="about-text">
+      At Studio Durai, we believe every space
+      should reflect the personality, lifestyle
+      and aspirations of the people who live in it.
+      <br><br>
+      Our approach combines timeless design,
+      thoughtful craftsmanship and attention
+      to every detail.
+    </p>
+
+    <a href="#services" class="dark-link">
+      EXPLORE OUR EXPERTISE →
+    </a>
+  </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+  <div class="section-label">WHAT WE DO</div>
+
+  <h2 class="section-title">
+    Our Expertise
+  </h2>
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-number">01 / DESIGN</div>
+      <h3>Interior Design</h3>
+      <p>
+        Beautifully curated interiors that
+        balance functionality, comfort
+        and timeless elegance.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">02 / CRAFT</div>
+      <h3>Custom Furniture</h3>
+      <p>
+        Bespoke furniture thoughtfully designed
+        and crafted for your unique spaces.
+      </p>
+    </div>
+
+    <div class="service-card">
+      <div class="service-number">03 / EXECUTION</div>
+      <h3>Turnkey Projects</h3>
+      <p>
+        Complete project management from
+        initial concepts to the final
+        finishing touches.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+
+<section class="portfolio" id="portfolio">
+
+  <div class="section-label">SELECTED WORK</div>
+
+  <h2 class="section-title">
+    Spaces We've Crafted
+  </h2>
+
+  <div class="portfolio-grid">
+
+    <div class="project">
+      <img
+        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=85"
+        alt="Residential interior">
+
+      <div class="project-info">
+        <h3>Modern Residence</h3>
+        <p>RESIDENTIAL DESIGN</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img
+        src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=900&q=85"
+        alt="Luxury interior">
+
+      <div class="project-info">
+        <h3>Timeless Elegance</h3>
+        <p>LUXURY INTERIORS</p>
+      </div>
+    </div>
+
+    <div class="project">
+      <img
+        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=85"
+        alt="Contemporary interior">
+
+      <div class="project-info">
+        <h3>Contemporary Living</h3>
+        <p>INTERIOR ARCHITECTURE</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- JOURNAL -->
+
+<section class="journal" id="journal">
+
+  <div class="section-label">OUR JOURNAL</div>
+
+  <h2 class="section-title">
+    Stories in Design
+  </h2>
+
+  <p>
+    Discover our thoughts on interiors,
+    craftsmanship, materials and the art
+    of creating beautiful living spaces.
+  </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+
+  <div class="section-label" style="color:#ffe1e1">
+    START YOUR PROJECT
+  </div>
+
+  <h2 class="section-title">
+    Let's Create Something Beautiful.
+  </h2>
+
+  <p>
+    Have a project in mind?
+    We'd love to hear your ideas and
+    help bring your vision to life.
+  </p>
+
+  <a
+    href="mailto:hello@example.com?subject=Interior%20Design%20Consultation"
+    class="main-btn">
+    BOOK A CONSULTATION →
+  </a>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div>© <span id="year"></span> Studio Durai. All Rights Reserved.</div>
+  <div>Crafted with Passion · Bangalore</div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
